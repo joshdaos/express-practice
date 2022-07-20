@@ -14,7 +14,7 @@ const shopRoutes = require('./routes/shop');
 app.use(bodyParser.urlencoded({ extended: false}));
 
 // calls admin routes
-app.use(adminRoutes);
+app.use('/admin', adminRoutes);
 // calls shop routes (must be last middleware route - contains '/' home route)
 app.use(shopRoutes);
 // error page route
